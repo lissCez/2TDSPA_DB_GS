@@ -6,7 +6,7 @@
 ### NOME: Nicolas Paiffer do Carmo RM: 554145  
 ----------------------------------------------
 
-# 🏠 Emergency Shelter Directory
+# 🏠 Sentinel Directory
 
 Este aplicativo tem como objetivo ser um **diretório simples e acessível de abrigos de emergência** disponíveis durante desastres naturais, como enchentes ou deslizamentos, no Brasil. A proposta é permitir que pessoas deslocadas encontrem rapidamente um local seguro, além de fornecer uma ferramenta para que autoridades e voluntários possam **gerenciar e atualizar a lista de abrigos**.
 
@@ -107,7 +107,7 @@ Este aplicativo tem como objetivo ser um **diretório simples e acessível de ab
 
 ### 🔜 Frontend
 
-* **Framework:** React (create-react-app)
+* **Framework:** React
 * **Mapa:**
 
   * `react-google-maps` (Google Maps) ou
