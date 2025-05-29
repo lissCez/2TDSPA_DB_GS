@@ -278,3 +278,34 @@ FROM T_GS_SHELTERS s
 JOIN ADDRESS a ON s.id_address = a.id_address
 GROUP BY a.city_address
 ORDER BY percentual_ocupacao DESC;
+
+-------------------------------------------------
+-- AGRUPAMENTOS E FILTROS COM FUNÇÕES AGREGADAS
+-------------------------------------------------
+
+--  Relatório de ocupação dos abrigos:
+
+SELECT 
+    s.name_shelter,
+    s.total_capacity,
+    s.current_capacity,
+    ROUND((s.current_capacity / s.total_capacity) * 100, 2) AS ocupacao_percentual
+FROM 
+    T_SHELTER s
+WHERE 
+    s.status = 'ABERTO'
+ORDER BY 
+    ocupacao_percentual DESC;
+
+-- Relatório de abrigos quase lotados (ex.: mais de 80% ocupado):
+
+SELECT 
+    s.name_shelter,
+    s.current_capacity,
+    s.total_capacity,
+    ROUND((s.current_capacity / s.total_capacity) * 100, 2) AS ocupacao_percentual
+FROM 
+    T_SHELTER s
+WHERE 
+    (s.current_capacity / s.total_capacity) >= 0.8;
+
