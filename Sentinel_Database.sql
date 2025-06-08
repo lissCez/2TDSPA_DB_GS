@@ -32,7 +32,7 @@ CREATE TABLE T_GS_CONTACT (
 CREATE TABLE T_GS_USER (
     id_user INTEGER PRIMARY KEY NOT NULL,
     email_user VARCHAR2(100) NOT NULL,
-    password_user VARCHAR2(23) NOT NULL,
+    password_user VARCHAR2(300) NOT NULL,
     role_user VARCHAR2(50) NOT NULL
 );
 
@@ -66,25 +66,25 @@ CREATE TABLE T_GS_SHELTERS (
 ------------
 
 -- Endereços
-INSERT INTO T_GS_ADDRESS VALUES (1, 'Rua A', 100, 'São Paulo', 'SP', 'Brasil', 12345678);
-INSERT INTO T_GS_ADDRESS VALUES (2, 'Rua B', 200, 'Rio de Janeiro', 'RJ', 'Brasil', 87654321);
-INSERT INTO T_GS_ADDRESS VALUES (3, 'Av Central', 300, 'Curitiba', 'PR', 'Brasil', 45678912);
-INSERT INTO T_GS_ADDRESS VALUES (4, 'Rua das Flores', 400, 'Salvador', 'BA', 'Brasil', 78912345);
-INSERT INTO T_GS_ADDRESS VALUES (5, 'Av Paulista', 500, 'São Paulo', 'SP', 'Brasil', 32165498);
+INSERT INTO T_GS_ADDRESS VALUES (1, 'Rua Oscar Freire', 100, 'São Paulo', 'São Paulo', 'Brasil', 12345678);
+INSERT INTO T_GS_ADDRESS VALUES (2, 'Rua da Consolação', 200, 'Rio de Janeiro', 'Rio de Janeiro', 'Brasil', 87654321);
+INSERT INTO T_GS_ADDRESS VALUES (3, 'Av Central', 300, 'Curitiba', 'Paraná', 'Brasil', 45678912);
+INSERT INTO T_GS_ADDRESS VALUES (4, 'Rua das Flores', 400, 'Salvador', 'Bahia', 'Brasil', 78912345);
+INSERT INTO T_GS_ADDRESS VALUES (5, 'Av Paulista', 500, 'São Paulo', 'São Paulo', 'Brasil', 32165498);
 
 -- Contatos
-INSERT INTO T_GS_CONTACT VALUES (1, 'contato1@email.com', '11999990001');
-INSERT INTO T_GS_CONTACT VALUES (2, 'contato2@email.com', '11999990002');
-INSERT INTO T_GS_CONTACT VALUES (3, 'contato3@email.com', '11999990003');
-INSERT INTO T_GS_CONTACT VALUES (4, 'contato4@email.com', '11999990004');
-INSERT INTO T_GS_CONTACT VALUES (5, 'contato5@email.com', '11999990005');
+INSERT INTO T_GS_CONTACT VALUES (1, 'abrigoesperanca@email.com', '11999990001');
+INSERT INTO T_GS_CONTACT VALUES (2, 'vidaabrigo@email.com', '11999990002');
+INSERT INTO T_GS_CONTACT VALUES (3, 'abrigoluz@email.com', '11999990003');
+INSERT INTO T_GS_CONTACT VALUES (4, 'abrigorenovar@email.com', '11999990004');
+INSERT INTO T_GS_CONTACT VALUES (5, 'abrigouniao@email.com', '11999990005');
 
 -- Usuários
-INSERT INTO T_GS_USER VALUES (1, 'admin1@email.com', 'senha123', 'Admin');
-INSERT INTO T_GS_USER VALUES (2, 'user2@email.com', 'senha234', 'Gerente');
-INSERT INTO T_GS_USER VALUES (3, 'user3@email.com', 'senha345', 'Operador');
-INSERT INTO T_GS_USER VALUES (4, 'user4@email.com', 'senha456', 'Analista');
-INSERT INTO T_GS_USER VALUES (5, 'user5@email.com', 'senha567', 'Supervisor');
+INSERT INTO T_GS_USER VALUES (1, 'ana@email.com', 'senha123', 'ADMIN');
+INSERT INTO T_GS_USER VALUES (2, 'joao@email.com', 'senha234', 'USER');
+INSERT INTO T_GS_USER VALUES (3, 'alissa@email.com', 'senha345', 'USER');
+INSERT INTO T_GS_USER VALUES (4, 'nicolas@email.com', 'senha456', 'VOLUNTEER');
+INSERT INTO T_GS_USER VALUES (5, 'melissa@email.com', 'senha567', 'VOLUNTEER');
 
 -- Abrigos
 INSERT INTO T_GS_SHELTERS VALUES (1, 'Abrigo Esperança', 100, 70, 'Água, Comida', 'Ativo', SYSDATE, 1, 1, 1);
