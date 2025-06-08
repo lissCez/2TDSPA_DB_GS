@@ -51,7 +51,7 @@ CREATE TABLE T_GS_SHELTERS (
     
     -- Definição das Foreign Keys
     CONSTRAINT FK_SHELTERS_ADDRESS FOREIGN KEY (id_address) 
-        REFERENCES ADDRESS (id_address),
+        REFERENCES T_GS_ADDRESS (id_address),
         
     CONSTRAINT FK_SHELTERS_CONTACT FOREIGN KEY (id_contact) 
         REFERENCES T_GS_CONTACT (id_contact),
